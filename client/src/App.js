@@ -23,8 +23,8 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
       <Navbar />
+      <Header />
       <Route exact path='/' render={() => <Articles posts={posts} />} />
       <Route 
         path='/article/:id' 

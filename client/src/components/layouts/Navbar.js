@@ -48,9 +48,9 @@ export default Navbar;
 //main navbar container
 
 const NavbarContainer = styled.div`
-    background: #277;
+    background-color: blue !important;
     .nav-link {
-        color: #fff !important;
+        // background-color: black !important;
         &:hover {
             background: var(--light-green);
         }
