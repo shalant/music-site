@@ -13,3 +13,7 @@
 #blah {
   background: #277 !important;
 }
+
+.noDisplay {
+  display: none;
+}

@@ -7,8 +7,8 @@ import '../../App.css';
 const Navbar = () => {
     return (
         <NavbarContainer>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light px-5 py-0">
-                <Link className="navbar-brand" to="#">
+            <nav className="navbar navbar-expand-lg navbar-light px-5 py-0">
+                <Link className="navbar-brand" to="/">
                     Navbar
                 </Link>
                 <button 
@@ -32,7 +32,12 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to='/add-article'>
-                                Add Article
+                                Sheet Music
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to='/photogallery'>
+                                Photo Gallery
                             </Link>
                         </li>
 
@@ -48,9 +53,8 @@ export default Navbar;
 //main navbar container
 
 const NavbarContainer = styled.div`
-    background-color: blue !important;
+    background: #344;
     .nav-link {
-        // background-color: black !important;
         &:hover {
             background: var(--light-green);
         }

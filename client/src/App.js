@@ -10,6 +10,7 @@ import Articles from './components/layouts/Articles';
 import Article from './components/layouts/Article';
 import EditArticle from './components/layouts/EditArticle';
 import AddArticle from './components/layouts/AddArticle';
+import PhotoGallery from './components/pages/PhotoGallery';
 
 function App() {
   const [posts, setPosts] = useState([])
@@ -25,17 +26,27 @@ function App() {
     <div className="App">
       <Navbar />
       <Header />
-      <Route exact path='/' render={() => <Articles posts={posts} />} />
-      <Route 
-        path='/article/:id' 
-        render={(props) => <Article {...props} posts={posts} />} 
-      />
-      <Route 
-        path='/update/:id' 
-        render={(props) => <EditArticle {...props} posts={posts} />} 
-      />
-      <Route path='/add-article' component={AddArticle} />
+        <Route exact path='/' render={() => <Articles posts={posts} />} />
+        
+  {/* displays each article */}
 
+        <Route 
+          path='/article/:id' 
+          render={(props) => <Article {...props} posts={posts} />} 
+        />
+
+  {/* Update article button? */}
+        <Route 
+          path='/update/:id' 
+          render={(props) => <EditArticle {...props} posts={posts} />} 
+        />
+
+  {/* Add article button */}
+        <Route path='/add-article' component={AddArticle} />
+
+    
+        <Route path='/photogallery' component={PhotoGallery} />
+      
       <Footer />
     </div>
   );

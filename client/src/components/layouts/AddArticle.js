@@ -75,7 +75,7 @@ const AddArticle = () => {
                 <label htmlFor='file'>Choose article image</label>
                 <input 
                     type='file' 
-                    fileName='articeImage' 
+                    filename='articeImage' 
                     className='form-control-file'
                     onChange={onChangeFile}
                 />
