@@ -9,6 +9,7 @@ import Articles from '../layouts/Articles';
 import Article from '../layouts/Article';
 import EditArticle from '../layouts/EditArticle';
 import AddArticle from '../layouts/AddArticle';
+import App from '../../App';
 
 function PhotoGallery() {
   const [posts, setPosts] = useState([])
@@ -21,10 +22,13 @@ function PhotoGallery() {
   }, [posts])
 
   return (
-    <div className="App">
-      <Navbar />
-      <Header />
-      <Route exact path='/' render={() => <Articles posts={posts} />} />
+    <>
+    <div>cool pics bro</div>
+    <div className="gallery">
+      <Route 
+        exact path='/' 
+        render={() => <Articles posts={posts} />} 
+      />
       
 {/* displays each article */}
 
@@ -42,12 +46,9 @@ function PhotoGallery() {
 {/* Add article button */}
       <Route path='/add-article' component={AddArticle} />
 
-  
-      <Route path='/photogallery' component={PhotoGallery} />
-
-      <Footer />
     </div>
-  );
+    </>
+);
 }
 
 export default PhotoGallery;

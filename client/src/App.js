@@ -11,6 +11,7 @@ import Article from './components/layouts/Article';
 import EditArticle from './components/layouts/EditArticle';
 import AddArticle from './components/layouts/AddArticle';
 import PhotoGallery from './components/pages/PhotoGallery';
+import Homepage from './components/pages/Homepage';
 
 function App() {
   const [posts, setPosts] = useState([])
@@ -25,10 +26,12 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Header />
+      <Homepage />
+
+  {/* edit/delete buttons */}
         <Route exact path='/' render={() => <Articles posts={posts} />} />
         
-  {/* displays each article */}
+  {/* displays each article, also detail */}
 
         <Route 
           path='/article/:id' 

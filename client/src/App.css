@@ -17,3 +17,7 @@
 .noDisplay {
   display: none;
 }
+
+.addNewSheetMusic {
+  right: 1rem !important;
+}
